@@ -6,7 +6,7 @@
   "author": "@bereczkybalazs",
   "license": "MIT",
   "scripts": {
-    "precompile": "babel --out-dir dist",
+    "precompile": "babel src --out-dir=dist",
     "test": "npm run precompile && ava --verbose"
   },
   "ava": {
