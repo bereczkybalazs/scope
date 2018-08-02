@@ -1,14 +1,10 @@
 import test from 'ava'
-import callable from '../helpers/callable'
+import sinon from 'sinon'
+import {InfrastructureWatcher} from '../../src/InfrastructureWatcher'
 
-test.beforeEach(() => {
-  callable.reset()
-})
-
-test('can query for DOM elements', t => {
-  document.body.innerHTML = '<p>Hello, world</p>'
-
-  const para = document.querySelector('p')
-
-  t.is(para.innerHTML, 'Hello, world')
+test('should call removedNodesCallback', t => {
+  let addedNodesCallback = sinon.fake()
+  let removedNodesCallback = sinon.fake()
+  InfrastructureWatcher(addedNodesCallback, removedNodesCallback)
+  t.true(removedNodesCallback.called)
 })
