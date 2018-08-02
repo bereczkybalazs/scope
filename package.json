@@ -8,8 +8,14 @@
   "scripts": {
     "test": "ava"
   },
+  "ava": {
+    "require": [
+      "./test/helpers/setup-browser-env.js"
+    ]
+  },
   "devDependencies": {
     "ava": "^0.17.0",
+    "browser-env": "^3.2.5",
     "standard": "^8.6.0"
   }
 }
