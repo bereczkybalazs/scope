@@ -1,0 +1,15 @@
+{
+  "name": "scope",
+  "version": "1.0.1",
+  "description": "Log time on website spent",
+  "repository": "https://github.com/",
+  "author": "@bereczkybalazs",
+  "license": "MIT",
+  "scripts": {
+    "test": "ava"
+  },
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "standard": "^8.6.0"
+  }
+}
